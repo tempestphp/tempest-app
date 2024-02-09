@@ -3,3 +3,4 @@ node_modules/
 vendor/
 /public/main.css
 /package-lock.json
+/.php-cs-fixer.cache
