@@ -35,5 +35,6 @@
             "composer phpstan",
             "composer phpunit"
         ]
-    }
+    },
+    "license": "MIT"
 }
