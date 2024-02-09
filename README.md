@@ -1,7 +1,7 @@
 Base project with [Tempest](https://github.com/brendt/tempest)
 
 ```php
-composer create-project brendt/tempest-app <project-name> -s dev
+composer create-project tempest/app <project-name>
 cd <project-name>
 npm run dev
 ```
