@@ -1,0 +1,17 @@
+{
+  "name": "brendt/tempest-app",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Brent Roose",
+      "email": "brendt@stitcher.io"
+    }
+  ],
+  "require": {
+    "brendt/tempest": "dev-main"
+  }
+}
