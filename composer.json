@@ -1,7 +1,7 @@
 {
-    "name": "brendt/tempest-app",
+    "name": "tempest/app",
     "require": {
-        "brendt/tempest": "dev-main"
+        "tempest/framework": "^0.0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.2",
