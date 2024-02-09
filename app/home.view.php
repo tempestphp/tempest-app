@@ -7,7 +7,7 @@
 </head>
 <body class="flex justify-center items-center">
 
-<h1 class="text-5xl font-bold">🌊</h1>
+<h1 class="text-5xl font-bold text-[#4f95d1]">Tempest</h1>
 
 </body>
 </html>
