@@ -7,9 +7,6 @@ module.exports = {
         extend: {},
     },
     mode: 'jit',
-    purge: [
-        "./app/**/*.{view.php,html,js}"
-    ],
     plugins: [],
 }
 
