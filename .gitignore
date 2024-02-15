@@ -4,3 +4,4 @@ vendor/
 /public/main.css
 /package-lock.json
 /.php-cs-fixer.cache
+.env

@@ -1,21 +1,24 @@
 #!/usr/bin/env php
 <?php
 
-use Tempest\Application\ConsoleApplication;
-use Tempest\Application\Kernel;
+use Tempest\AppConfig;
+use Tempest\Application\Environment;
+use Tempest\Tempest;
+use function Tempest\env;
 
-require_once __DIR__ . '/vendor/autoload.php';
+try {
+    require_once __DIR__ . '/vendor/autoload.php';
+} catch (Throwable) {
+    require_once getcwd() . '/../autoload.php';
+}
 
-$container = (new Kernel())->init(
-    rootDirectory: __DIR__ . '/app',
-    rootNamespace: 'App\\',
-);
+Tempest::setupEnv(__DIR__);
 
-$app = new ConsoleApplication(
-    args: $_SERVER['argv'],
-    container: $container,
-);
-
-$app->run();
+Tempest::boot(new AppConfig(
+    appPath: __DIR__ . '/app',
+    appNamespace: 'App\\',
+    environment: Environment::from(env('ENVIRONMENT')),
+    discoveryCache: env('DISCOVERY_CACHE'),
+))->console()->run();
 
 exit;
