@@ -3,16 +3,15 @@
 use Tempest\AppConfig;
 use Tempest\Application\Environment;
 use Tempest\Tempest;
+use function Tempest\env;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-Tempest::setupEnv(__DIR__ . '/../');
+$createAppConfig = fn () => new AppConfig(
+    environment: Environment::from(env('ENVIRONMENT')),
+    discoveryCache: env('DISCOVERY_CACHE'),
+);
 
-Tempest::boot(new AppConfig(
-    appPath: __DIR__ . '/../app',
-    appNamespace: 'App\\',
-    environment: Environment::from(getenv('ENVIRONMENT')),
-    discoveryCache: getenv('DISCOVERY_CACHE'),
-))->http()->run();
+Tempest::boot(__DIR__ . '/../', $createAppConfig)->http()->run();
 
 exit;
