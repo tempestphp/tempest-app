@@ -23,9 +23,6 @@ jobs:
       - name: Install Tempest
         run: php vendor/bin/tempest install --force
 
-      - name: Setup .env
-        run: cp .env.example .env
-
       - name: Run Tempest console
         run: php ./tempest
 
