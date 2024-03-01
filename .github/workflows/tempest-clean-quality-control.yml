@@ -1,0 +1,36 @@
+name: tempest/clean QA trigger from tempest/framework
+
+on: [push, workflow_dispatch]
+
+jobs:
+  run-qa:
+    name: Run QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick, fileinfo
+          coverage: pcov
+
+      - name: Require Tempest
+        run: composer require tempest/framework
+
+      - name: List Installed Dependencies
+        run: composer show -D
+
+      - name: Install Tempest
+        run: php vendor/bin/tempest install
+
+      - name: Setup .env
+        run: cp .env.example .env
+
+      - name: Run Tempest console
+        run: php ./tempest
+
+      - name: Run Tempest Server in the background
+        run: php ./tempest serve &
+
+      - name: Try GET request
+        run: curl http://localhost:8000
