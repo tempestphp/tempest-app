@@ -1,9 +1,6 @@
 name: Setup App
 
-on:
-  push:
-    branches: [main]
-
+on: [push, workflow_dispatch]
 
 jobs:
   run-qa:
