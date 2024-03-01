@@ -1,4 +1,4 @@
-name: tempest/app QA trigger
+name: tempest/app QA trigger from tempest/framework
 
 on: [push, workflow_dispatch]
 
