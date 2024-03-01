@@ -15,13 +15,13 @@ jobs:
           coverage: pcov
 
       - name: Require Tempest
-        run: composer require tempest/framework
+        run: composer require tempest/framework:dev-main
 
       - name: List Installed Dependencies
         run: composer show -D
 
       - name: Install Tempest
-        run: php vendor/bin/tempest install
+        run: php vendor/bin/tempest install --force
 
       - name: Setup .env
         run: cp .env.example .env
