@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer update --${{ matrix.stability }} --prefer-dist --no-interaction
+          composer update
           npm i
           npm run dev
       - name: List Installed Dependencies
