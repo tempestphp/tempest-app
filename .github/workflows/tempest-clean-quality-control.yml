@@ -1,6 +1,8 @@
 name: tempest/clean QA trigger from tempest/framework
 
-on: [push, workflow_dispatch]
+on:
+  schedule:
+    - cron: '0 8 * * *'
 
 jobs:
   run-qa:
