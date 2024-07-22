@@ -1,9 +1,6 @@
 <?php
 
-use Tempest\AppConfig;
-use Tempest\Application\Environment;
-use Tempest\Tempest;
-use function Tempest\env;
+use Tempest\Framework\Tempest;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
