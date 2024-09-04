@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use Tempest\Framework\Tempest;
+use Tempest\Console\ConsoleApplication;
 
 try {
     require_once __DIR__ . '/vendor/autoload.php';
@@ -9,6 +9,6 @@ try {
     require_once getcwd() . '/../autoload.php';
 }
 
-Tempest::boot(__DIR__)->console()->run();
+ConsoleApplication::boot()->run();
 
 exit;
