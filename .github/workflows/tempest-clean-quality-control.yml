@@ -25,7 +25,7 @@ jobs:
         run:  composer init -ns dev
 
       - name: Require Tempest
-        run: composer require tempest/framework:alpha-1
+        run: composer require tempest/framework:1.0-alpha1
 
       - name: List Installed Dependencies
         run: composer show -D
