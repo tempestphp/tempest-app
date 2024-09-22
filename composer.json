@@ -4,11 +4,18 @@
         "tempest/framework": "1.0-alpha1"
     },
     "require-dev": {
+        "tempest/scaffold": "dev-main",
         "phpunit/phpunit": "^10.2",
         "phpstan/phpstan": "^1.10",
         "friendsofphp/php-cs-fixer": "^3.21",
         "symfony/var-dumper": "^7.1"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mattdinthehouse/tempest-scaffold"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/"
@@ -34,7 +41,8 @@
             "composer csfixer",
             "composer phpstan",
             "composer phpunit"
-        ]
+        ],
+        "post-create-project-cmd": "vendor/bin/tempest scaffold:setup"
     },
     "license": "MIT",
     "minimum-stability": "dev",
