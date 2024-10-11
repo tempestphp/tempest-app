@@ -3,7 +3,7 @@
 ```php
 composer create-project tempest/app <project-name>
 cd <project-name>
-npm run dev
+php tempest serve
 ```
 
 Read all about Tempest in [the docs](https://github.com/tempestphp/tempest-docs/blob/master/01-getting-started.md).
