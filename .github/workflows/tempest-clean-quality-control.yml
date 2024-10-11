@@ -22,7 +22,7 @@ jobs:
           coverage: pcov
 
       - name: Init composer
-        run:  composer init -ns dev
+        run:  composer init -ns dev --autoload=src
 
       - name: Require Tempest
         run: composer require tempest/framework:1.0-alpha2
