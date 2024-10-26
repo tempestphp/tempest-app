@@ -1,4 +1,4 @@
-name: tempest/clean QA trigger from tempest/framework
+name: Clean tempest install
 
 on:
   push:
