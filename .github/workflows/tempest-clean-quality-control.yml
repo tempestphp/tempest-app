@@ -1,4 +1,4 @@
-name: tempest/clean QA trigger from tempest/framework
+name: Clean tempest install
 
 on:
   push:
@@ -31,10 +31,13 @@ jobs:
         run: composer show -D
 
       - name: Install Tempest
-        run: php vendor/bin/tempest install --force
+        run: php vendor/bin/tempest install framework --force
 
       - name: Run Tempest console
         run: php ./tempest
+
+      - name: Install auth
+        run: php ./tempest install auth --force
 
       - name: Run Tempest Server in the background
         run: php ./tempest serve &

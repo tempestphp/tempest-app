@@ -1,4 +1,4 @@
-name: tempest/app QA trigger from tempest/framework
+name: Composer create-project install
 
 on:
   push:

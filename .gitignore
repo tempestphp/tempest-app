@@ -5,3 +5,4 @@ vendor/
 /package-lock.json
 /.php-cs-fixer.cache
 .env
+.idea
