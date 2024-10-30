@@ -25,7 +25,7 @@ jobs:
         run:  composer init -ns dev --autoload=src
 
       - name: Require Tempest
-        run: composer require tempest/framework:1.0-alpha2
+        run: composer require tempest/framework:dev-main
 
       - name: List Installed Dependencies
         run: composer show -D
