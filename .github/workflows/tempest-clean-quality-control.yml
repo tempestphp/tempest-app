@@ -35,9 +35,9 @@ jobs:
 
       - name: Run Tempest console
         run: php ./tempest
-
-      - name: Install auth
-        run: php ./tempest install auth --force
+#
+#      - name: Install auth
+#        run: php ./tempest install auth --force
 
       - name: Run Tempest Server in the background
         run: php ./tempest serve &
