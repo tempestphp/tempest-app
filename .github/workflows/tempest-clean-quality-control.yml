@@ -27,9 +27,6 @@ jobs:
       - name: Configure namespace
         run: sed -i 's/\\\\/App\\\\/' composer.json
 
-      - name: Configure namespace
-        run: mkdir app
-
       - name: Require Tempest
         run: composer require tempest/framework:dev-main
 
