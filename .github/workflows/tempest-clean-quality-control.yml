@@ -22,7 +22,13 @@ jobs:
           coverage: pcov
 
       - name: Init composer
-        run:  composer init -ns dev --autoload=src
+        run:  composer init -ns dev --autoload=app
+
+      - name: Configure namespace
+        run: sed -i 's/\\\\/App\\\\/' composer.json
+
+      - name: Configure namespace
+        run: mkdir app
 
       - name: Require Tempest
         run: composer require tempest/framework:dev-main
@@ -35,9 +41,9 @@ jobs:
 
       - name: Run Tempest console
         run: php ./tempest
-#
-#      - name: Install auth
-#        run: php ./tempest install auth --force
+
+      - name: Install auth
+        run: php ./tempest install auth --force
 
       - name: Run Tempest Server in the background
         run: php ./tempest serve &
