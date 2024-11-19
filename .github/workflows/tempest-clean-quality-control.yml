@@ -22,10 +22,7 @@ jobs:
           coverage: pcov
 
       - name: Init composer
-        run:  composer init -ns dev --autoload=app
-
-      - name: Configure namespace
-        run: sed -i 's/\\\\/App\\\\/' composer.json
+        run:  composer init -ns dev
 
       - name: Require Tempest
         run: composer require tempest/framework:dev-main
