@@ -27,8 +27,13 @@
         }
     ],
     "scripts": {
+        "post-create-project-cmd": [
+            "./vendor/bin/tempest install framework -f",
+            "./tempest discovery:generate",
+            "rm -r .github"
+        ],
         "post-package-update": [
-            "php tempest discovery:generate"
+            "./tempest discovery:generate"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
         "csfixer": "vendor/bin/php-cs-fixer fix --allow-risky=yes",
