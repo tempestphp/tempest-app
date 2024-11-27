@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ ubuntu-latest ]
+        php: [ 8.4 ]
     steps:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
