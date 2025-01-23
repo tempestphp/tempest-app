@@ -28,12 +28,12 @@
     ],
     "scripts": {
         "post-create-project-cmd": [
-            "./vendor/bin/tempest install framework -f",
-            "./tempest discovery:generate",
+            "@php ./vendor/bin/tempest install framework -f",
+            "@php ./tempest discovery:generate",
             "rm -r .github"
         ],
         "post-package-update": [
-            "./tempest discovery:generate"
+            "@php ./tempest discovery:generate"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
         "csfixer": "PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix --allow-risky=yes",
