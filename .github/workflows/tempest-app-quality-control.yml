@@ -26,10 +26,7 @@ jobs:
           coverage: pcov
 
       - name: Install dependencies
-        run: |
-          composer update
-#          npm i
-#          npm run dev
+        run: composer update
       - name: List Installed Dependencies
         run: composer show -D
 
