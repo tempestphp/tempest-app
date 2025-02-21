@@ -28,8 +28,8 @@ jobs:
       - name: Install dependencies
         run: |
           composer update
-          npm i
-          npm run dev
+#          npm i
+#          npm run dev
       - name: List Installed Dependencies
         run: composer show -D
 
