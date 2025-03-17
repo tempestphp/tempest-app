@@ -1,6 +1,8 @@
 name: Composer create-project install
 
 on:
+  pull_request:
+  workflow_dispatch:
   push:
     branches: [main]
   schedule:
@@ -27,7 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: composer update
-      - name: List Installed Dependencies
+      - name: List installed Dependencies
         run: composer show -D
 
       - name: Setup .env

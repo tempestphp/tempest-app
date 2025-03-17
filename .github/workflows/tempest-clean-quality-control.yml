@@ -1,6 +1,7 @@
 name: Clean tempest install
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   schedule:

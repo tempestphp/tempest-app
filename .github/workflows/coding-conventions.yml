@@ -1,0 +1,28 @@
+name: Coding conventions
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+ check-style:
+    name: Run style check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
+          coverage: none
+
+      - name: Install dependencies
+        run: |
+          composer update --prefer-dist --no-interaction
+          composer mago:install-binary
+
+      - name: Run Mago 
+        run: |
+          ./vendor/bin/mago fmt --dry-run
+          ./vendor/bin/mago lint --reporting-format=github
