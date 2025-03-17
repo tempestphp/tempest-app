@@ -4,8 +4,8 @@
         "tempest/framework": "dev-main"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.2",
-        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^10.2 || ^11.5",
+        "phpstan/phpstan": "^2.0",
         "friendsofphp/php-cs-fixer": "^3.21",
         "symfony/var-dumper": "^7.1"
     },
@@ -32,7 +32,7 @@
             "@php ./tempest discovery:generate",
             "rm -r .github"
         ],
-        "post-package-update": [
+        "post-autoload-dump": [
             "@php ./tempest discovery:generate"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
