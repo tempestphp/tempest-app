@@ -1,7 +1,7 @@
 {
     "name": "tempest/app",
     "require": {
-        "tempest/framework": "dev-main"
+        "tempest/framework": "v1.0.0-alpha.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^10.2 || ^11.5",
@@ -28,8 +28,7 @@
     "scripts": {
         "post-create-project-cmd": [
             "@php ./vendor/bin/tempest install framework -f",
-            "@php ./tempest discovery:generate",
-            "rm -r .github"
+            "@php ./tempest discovery:generate"
         ],
         "post-autoload-dump": [
             "@php ./tempest discovery:generate"
