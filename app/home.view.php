@@ -20,7 +20,7 @@
                     <p class="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">The PHP framework that gets out of your way.</p>
                     <!-- CTAs -->
                     <div class="mt-10 flex flex-col sm:flex-row gap-y-4 items-center justify-center gap-x-6">
-                        <a href="https://tempestphp.com/docs/framework/getting-started" target="_blank" class="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Documentation</a>
+                        <a href="https://tempestphp.com/docs" target="_blank" class="rounded-md bg-sky-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600">Documentation</a>
                         <a href="https://tempestphp.com/discord" class="text-sm/6 font-semibold text-gray-900 focus-visible:outline-none focus-visible:underline focus-visible:underline-offset-4 focus-visible:decoration-gray-300">Join our Discord
                             <span aria-hidden="true">→</span></a>
                     </div>
