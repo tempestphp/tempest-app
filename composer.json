@@ -31,7 +31,7 @@
             "@php ./tempest discovery:generate"
         ],
         "post-autoload-dump": [
-            "@php ./tempest discovery:generate"
+            "@php ./vendor/bin/tempest discovery:generate"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
         "mago:fmt": "vendor/bin/mago fmt",
