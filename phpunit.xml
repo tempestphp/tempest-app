@@ -20,4 +20,9 @@
       <directory suffix=".php">./app</directory>
     </include>
   </source>
+  <php>
+    <env name="ENVIRONMENT" value="testing" />
+    <env name="BASE_URI" value="" />
+    <env name="CACHE" value="null" />
+  </php>
 </phpunit>
