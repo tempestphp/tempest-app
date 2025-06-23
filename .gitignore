@@ -1,3 +1,4 @@
+.tempest
 node_modules/
 vendor/
 /public/main.css
