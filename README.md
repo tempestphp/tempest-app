@@ -11,7 +11,7 @@
   The source code for the framework itself can be found at <code><a href="https://github.com/tempestphp/tempest-framework">tempestphp/tempest-framework</a></code>.
 	<br />
 	<br />
-  <pre><div align="center">composer create-project tempest/app -s dev &lt;my-app&gt;</div></pre>
+  <pre><div align="center">composer create-project tempest/app</div></pre>
 	<br />
 	<br />
 	<sub>
