@@ -28,10 +28,10 @@
     "scripts": {
         "post-create-project-cmd": [
             "@php ./vendor/bin/tempest install framework -f",
-            "@php ./tempest discovery:generate"
+            "@php ./tempest discovery:generate --no-interaction"
         ],
         "post-autoload-dump": [
-            "@php ./vendor/bin/tempest discovery:generate"
+            "@php ./vendor/bin/tempest discovery:generate --no-interaction"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
         "mago:fmt": "vendor/bin/mago fmt",

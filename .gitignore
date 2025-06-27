@@ -1,3 +1,4 @@
+.tempest
 node_modules/
 vendor/
 /public/main.css
@@ -7,3 +8,5 @@ vendor/
 .idea
 .phpunit.result.cache
 log/
+*.local.config.php
+*.dev.config.php
