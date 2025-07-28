@@ -21,4 +21,4 @@
 		&nbsp;
 		Join the <a href="https://tempestphp.com/discord">Discord</a> server
   </sub>
-</p>
+</div>
