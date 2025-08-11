@@ -32,8 +32,8 @@ jobs:
       - name: List installed Dependencies
         run: composer show -D
 
-      - name: Setup .env
-        run: cp .env.example .env
+      - name: Install framework files
+        run: php ./tempest install framework --force
 
       - name: Run Tempest console
         run: php ./tempest
