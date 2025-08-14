@@ -2,16 +2,18 @@
 
 namespace App;
 
+use Tempest\Console\Console;
 use Tempest\Console\ConsoleCommand;
-use Tempest\Console\HasConsole;
 
 final class HelloCommand
 {
-    use HasConsole;
+    public function __construct(
+        private readonly Console $console,
+    ) {}
 
     #[ConsoleCommand]
     public function world(string $name = 'stranger'): void
     {
-        $this->success("Hello, {$name}!");
+        $this->console->success("Hello, {$name}!");
     }
 }

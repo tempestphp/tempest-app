@@ -4,12 +4,15 @@ declare(strict_types=1);
 
 namespace Tests;
 
+use PHPUnit\Framework\Attributes\Test;
+
 /**
  * @internal
  */
 final class HomeControllerTest extends IntegrationTestCase
 {
-    public function test_index(): void
+    #[Test]
+    public function index_is_reachable(): void
     {
         $this->http
             ->get('/')

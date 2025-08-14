@@ -14,6 +14,6 @@ final readonly class HomeController
     #[Get('/')]
     public function __invoke(): View
     {
-        return view('home.view.php');
+        return view('./home.view.php');
     }
 }
