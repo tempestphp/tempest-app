@@ -1,4 +1,4 @@
-php_version = "8.4.0"
+php-version = "8.4.0"
 
 [source]
 paths = ["app", "tests"]
@@ -8,21 +8,17 @@ excludes = [
   "./vendor/composer",
 ]
 
-[format]
-print_width = 180
-tab_width = 4
-use_tabs = false
-null_type_hint = "question"
-space_before_arrow_function_parameter_list_parenthesis = true
-space_after_logical_not_unary_prefix_operator = true
-always_break_named_arguments_list = false
-preserve_breaking_member_access_chain = true
-preserve_breaking_argument_list = true
-preserve_breaking_array_like = true
-preserve_breaking_parameter_list = true
-preserve_breaking_attribute_list = true
-preserve_breaking_conditional_expression = true
-
-[linter]
-default_plugins = true
-plugins = ["php-unit"]
+[formatter]
+print-width = 180
+tab-width = 4
+use-tabs = false
+null-type-hint = "question"
+space-before-arrow-function-parameter-list-parenthesis = true
+space-after-logical-not-unary-prefix-operator = true
+always-break-named-arguments-list = false
+preserve-breaking-member-access-chain = true
+preserve-breaking-argument-list = true
+preserve-breaking-array-like = true
+preserve-breaking-parameter-list = true
+preserve-breaking-attribute-list = true
+preserve-breaking-conditional-expression = true

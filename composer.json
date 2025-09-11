@@ -2,12 +2,12 @@
     "name": "tempest/app",
     "type": "project",
     "require": {
-        "tempest/framework": "^1.5"
+        "tempest/framework": "^1.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^12.3.4",
-        "symfony/var-dumper": "^7.3.2",
-        "carthage-software/mago": "^0.26.1"
+        "phpunit/phpunit": "^12.3.10",
+        "symfony/var-dumper": "^7.3.3",
+        "carthage-software/mago": "1.0.0-beta.13"
     },
     "autoload": {
         "psr-4": {
@@ -28,12 +28,12 @@
             "@php ./vendor/bin/tempest discovery:generate --no-interaction"
         ],
         "phpunit": "vendor/bin/phpunit --display-warnings --display-skipped --display-deprecations --display-errors --display-notices",
-        "mago:fmt": "vendor/bin/mago fmt",
-        "mago:lint": "vendor/bin/mago lint --fix && vendor/bin/mago lint",
+        "fmt": "vendor/bin/mago fmt",
+        "lint": "vendor/bin/mago lint --fix --format-after-fix",
         "qa": [
-            "composer mago:fmt",
+            "composer fmt",
             "composer phpunit",
-            "composer mago:lint"
+            "composer lint"
         ]
     },
     "license": "MIT",
