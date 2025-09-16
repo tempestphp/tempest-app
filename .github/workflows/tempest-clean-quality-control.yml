@@ -47,6 +47,9 @@ jobs:
       - name: Run Tempest console
         run: php ./tempest
 
+      - name: Run migrations
+        run: php ./tempest migrate:up --force
+
       - name: Install auth
         run: php ./tempest install auth --force
 
