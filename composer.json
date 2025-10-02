@@ -22,7 +22,8 @@
     "scripts": {
         "post-create-project-cmd": [
             "@php ./vendor/bin/tempest install framework -f",
-            "@php ./tempest discovery:generate --no-interaction"
+            "@php ./tempest discovery:generate --no-interaction",
+            "@php ./tempest key:generate"
         ],
         "post-autoload-dump": [
             "@php ./vendor/bin/tempest discovery:generate --no-interaction"
