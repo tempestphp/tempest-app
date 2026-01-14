@@ -1,4 +1,4 @@
-<x-base>
+<x-base :title="Tempest\env('APP_TITLE', default: 'Tempest Scaffold')">
   <main class="bg-sky-100/20 w-screen h-screen overflow-hidden">
     <div class="isolate relative flex flex-col justify-center items-center px-6 lg:px-8 h-full">
       <!-- Background gradient -->
