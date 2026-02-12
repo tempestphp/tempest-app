@@ -4,8 +4,7 @@ namespace App;
 
 use Tempest\Router\Get;
 use Tempest\View\View;
-
-use function Tempest\view;
+use function Tempest\View\view;
 
 final readonly class HomeController
 {
